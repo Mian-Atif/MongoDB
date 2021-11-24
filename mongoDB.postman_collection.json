@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "859ca0e7-53b7-4f99-9b5e-8098707619a4",
+		"name": "mongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"atif\",\r\n\"email\":\"atif@gmail.com\",\r\n\"password\":\"123\",\r\n\"phone_no\":\"03017737700\",\r\n\"favorite_animal\":\"dog\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\":\"atif@gmail.com\",\r\n\"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc3NTcwODYsIm5iZiI6MTYzNzc1NzA4NiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5ZTEyMzYxYzU4MDAwMDQ1MDAwNTE0IiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkaTA5ZlBEYVJpR0JTQzBkdmkuWmZcL09FTVNcL2RHSGQ3blFqTnZxcnh1VE9oc1VCM0FPNWhMTyJ9fQ.q7HLts6DV51uBNpSC_6ga4DJZ6vm6hHx0L0ZzRygSLz_DlHU0DEITUmic0X3dmBnQlAwj-jpNRe9C1iG6uCvug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc3NTA5NDcsIm5iZiI6MTYzNzc1MDk0NywiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5ZTEyMzYxYzU4MDAwMDQ1MDAwNTE0IiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkSDNSOVg2TFI1S01wRXloNWk0RUkwZTJ6bUNUNVwvYzl6VEdwZldRVEZHZUZ6ZThFQi5Kc3pTIn19.FSAgbNj9d2iugCagOniLcW6hWQDybAp3A2cxHWTKAArbwUBV4HVMxZ_TM8Qe165hU9OlG5ePeP3CmJ9AfjafJA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Mian Atif Rizwan/Pictures/293434_1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/uploadfile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"uploadfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchuser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc3NTA5NDcsIm5iZiI6MTYzNzc1MDk0NywiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5ZTEyMzYxYzU4MDAwMDQ1MDAwNTE0IiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkSDNSOVg2TFI1S01wRXloNWk0RUkwZTJ6bUNUNVwvYzl6VEdwZldRVEZHZUZ6ZThFQi5Kc3pTIn19.FSAgbNj9d2iugCagOniLcW6hWQDybAp3A2cxHWTKAArbwUBV4HVMxZ_TM8Qe165hU9OlG5ePeP3CmJ9AfjafJA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\":\"atif@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/searchuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"searchuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgetpassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\":\"atif@gmail.com\",\r\n \"favorite_animal\":\"dog\",\r\n \"new_password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forgetpassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forgetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateuser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc1ODMyNzcsIm5iZiI6MTYzNzU4MzI3NywiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7Il9pZCI6eyIkb2lkIjoiNjE5YjY4ODFmMDBlMDAwMDM4MDAyOTM5In0sIm5hbWUiOiJtYXNob29kIiwiZW1haWwiOiJpYW1rYWl0aGViZXN0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJ5JDEwJEI0Nk9JMmQzblwvb2wucktUNEF6dVBlZWQzbDY1WEJrMFh1d29oRUxyTW9mMlRLVG1EMUsueSIsInBob25lX25vIjoiMTIzNDU2Nzg5IiwicHJvZmlsZSI6ImFwaSBkb2NcL0ZHcDdzWDhqSlBIeXZ3VnFJN0hWeExpRzNiSkJ3TzRqMlB0VjkwR00uanBnIiwiZmF2b3JpdGVfYW5pbWFsIjoiY2F0IiwiZW1haWxfdmVyaWZpZWRfYXQiOiJudWxsIiwicmVtZW1iZXJfdG9rZW4iOm51bGwsInVwZGF0ZWRfYXQiOiIyMDIxLTExLTIyIDA5OjUzOjA1IiwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMjIgMDk6NTM6MDUifX0.UwBnqRr4FxftERcZCSNeAj1JOo9Rh-i_DOvGYg-Jdb_C_2IWPB9PARYdkKl1PxKQqH4dNLoHL6XHkcQ3UZJCIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mashood\",\r\n    \"phone_no\":\"090078601\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addpost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc3NTc3ODIsIm5iZiI6MTYzNzc1Nzc4MiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5ZTEyMzYxYzU4MDAwMDQ1MDAwNTE0IiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkYjhaUWREYmJuR0lWY05pYzQ3RHpMdWtTenBFT0toVVd2alV5QnFXVUdoNWtFWWMuNi45YWkifX0.skYWTzw9LRx8F8r3a0KVSrePRWqqLHynckQ6whi3Jh624iGBJBmFtbPy42z5-D8W27pet_gyNbTvhOM24Tv3jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Mian Atif Rizwan/Pictures/atif 1.jpg"
+						},
+						{
+							"key": "caption",
+							"value": "pf",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "mohsin",
+							"type": "text"
+						},
+						{
+							"key": "visibility",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addpost",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcomment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc3NTc3ODIsIm5iZiI6MTYzNzc1Nzc4MiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5ZTEyMzYxYzU4MDAwMDQ1MDAwNTE0IiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkYjhaUWREYmJuR0lWY05pYzQ3RHpMdWtTenBFT0toVVd2alV5QnFXVUdoNWtFWWMuNi45YWkifX0.skYWTzw9LRx8F8r3a0KVSrePRWqqLHynckQ6whi3Jh624iGBJBmFtbPy42z5-D8W27pet_gyNbTvhOM24Tv3jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Mian Atif Rizwan/Pictures/36780a1e-2c75-4b88-ac52-15bcb9fc75f7.jfif"
+						},
+						{
+							"key": "comment",
+							"value": "hellow um atif",
+							"type": "text"
+						},
+						{
+							"key": "post_id",
+							"value": "619e3a361c58000045000515",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addcomment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addfriend",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc2NjQ4NTYsIm5iZiI6MTYzNzY2NDg1NiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5Y2M4MmY5NTIyMDAwMDdkMDAwM2JhIiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkNU1iZUVTUkNYRHdESHZPbDFrc1FIdVQ3QjVXWGg2c1RIOVhxSjZWV25WNVVMQVh4SHAwaGEifX0.YZnil7-W0uhf9aR6-nYcybmTT46Lg1M69O4ZtWgI6Hydvg0ZkOHvUvNy9g9zdSmZkdrxGP_Z02M_DGgIbhHdlg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"friend_id\":\"619cc82f952200007d0003ba\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addfriend",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addfriend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecomment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc2NjQ4NTYsIm5iZiI6MTYzNzY2NDg1NiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5Y2M4MmY5NTIyMDAwMDdkMDAwM2JhIiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkNU1iZUVTUkNYRHdESHZPbDFrc1FIdVQ3QjVXWGg2c1RIOVhxSjZWV25WNVVMQVh4SHAwaGEifX0.YZnil7-W0uhf9aR6-nYcybmTT46Lg1M69O4ZtWgI6Hydvg0ZkOHvUvNy9g9zdSmZkdrxGP_Z02M_DGgIbhHdlg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"post_id\":\"619e3a361c58000045000515\",\r\n    \"comment_id\":\"619e3ef01c58000045000516\",\r\n    \"new_comment\":\"hellooooooooooooo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updatecomment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatecomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletecomment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2Mzc2NjQ4NTYsIm5iZiI6MTYzNzY2NDg1NiwiYXVkIjoiYXBwIHVzZXIiLCJkYXRhIjp7ImlkIjoiNjE5Y2M4MmY5NTIyMDAwMDdkMDAwM2JhIiwibmFtZSI6ImF0aWYiLCJlbWFpbCI6ImF0aWZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkNU1iZUVTUkNYRHdESHZPbDFrc1FIdVQ3QjVXWGg2c1RIOVhxSjZWV25WNVVMQVh4SHAwaGEifX0.YZnil7-W0uhf9aR6-nYcybmTT46Lg1M69O4ZtWgI6Hydvg0ZkOHvUvNy9g9zdSmZkdrxGP_Z02M_DGgIbhHdlg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"post_id\":\"619cc86b952200007d0003bb\",\r\n    \"comment_id\":\"619cc90d952200007d0003bd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deletecomment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deletecomment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
